@@ -17,6 +17,6 @@ def tokenizer(text):
     return tokenized
 
 vect = HashingVectorizer(decode_error='ignore', 
-                         n_features=2*21, 
+                         n_features=2**21,
                          preprocessor=None, 
                          tokenizer=tokenizer)
