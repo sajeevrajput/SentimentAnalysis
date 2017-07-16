@@ -33,7 +33,7 @@ def train(document, y):
 def sqlite_entry(path, document, y):
     conn = sqlite3.connect(path)
     c= conn.cursor()
-    c.execute("INSERT INTO reviews_db (reviews, sentiment, date) VALUES (?, ?, DATETIME('now'))", (document, y))
+    c.execute("INSERT INTO reviews_db (review, sentiment, date) VALUES (?, ?, DATETIME('now'))", (document, y))
     conn.commit()
     conn.close()
 
